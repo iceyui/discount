@@ -7,6 +7,7 @@ const chips = $("chips");
 const copyActions = $("copy-actions");
 const copyFullBtn = $("copy-full");
 const copyPctBtn = $("copy-pct");
+const addBtn = $("add");
 const clearBtn = $("clear");
 
 const ALLOWED = /[^0-9+]/g;
@@ -195,6 +196,23 @@ function handleInput() {
   }
   update();
 }
+
+function insertPlus() {
+  const val = input.value;
+  const pos = input.selectionStart ?? val.length;
+  const before = val.slice(0, pos);
+  const after = val.slice(pos);
+
+  if (!before.length || !/\d$/.test(before) || after.startsWith("+")) return;
+
+  input.value = before + "+" + after;
+  const newPos = pos + 1;
+  input.setSelectionRange(newPos, newPos);
+  input.focus();
+  handleInput();
+}
+
+addBtn.addEventListener("click", insertPlus);
 
 clearBtn.addEventListener("click", () => {
   input.value = "";
