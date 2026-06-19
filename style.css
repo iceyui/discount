@@ -208,30 +208,6 @@ h1 {
   touch-action: manipulation;
 }
 
-.add-btn {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  min-height: 36px;
-  padding: 0;
-  font-size: 1.35rem;
-  font-weight: 500;
-  line-height: 1;
-  color: var(--accent-bright);
-  background: var(--accent-dim);
-  border: 1px solid rgba(125, 211, 252, 0.2);
-  border-radius: 10px;
-  cursor: pointer;
-  touch-action: manipulation;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
-
-.add-btn:active {
-  background: rgba(125, 211, 252, 0.22);
-  color: var(--frost);
-  border-color: var(--accent);
-}
-
 .clear-btn {
   width: 28px;
   height: 28px;
@@ -394,12 +370,6 @@ h1 {
 }
 
 @media (hover: hover) {
-  .add-btn:hover {
-    background: rgba(125, 211, 252, 0.16);
-    color: var(--frost);
-    border-color: var(--accent);
-  }
-
   .clear-btn:hover {
     background: rgba(125, 211, 252, 0.16);
     color: var(--frost);
