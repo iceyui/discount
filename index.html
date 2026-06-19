@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Disc — Diskon Bertingkat | iceyuki</title>
+  <meta name="description" content="Kalkulator diskon bertingkat oleh iceyuki">
+  <meta name="theme-color" content="#050d18">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="brand">
+      <div class="brand-icon">❄</div>
+      <p class="brand-text"><span>disc</span>.iceyuki.com</p>
+    </div>
+
+    <div class="header">
+      <h1>Diskon Bertingkat</h1>
+    </div>
+
+    <div class="field">
+      <label class="field-label" for="diskon">Diskon</label>
+      <div class="box" id="diskon-box">
+        <div class="input-row">
+          <input
+            id="diskon"
+            class="box-input"
+            type="text"
+            inputmode="decimal"
+            enterkeyhint="done"
+            placeholder="9+10+5+25"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          >
+          <button class="clear-btn" id="clear" type="button" aria-label="Hapus input">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3 3l8 8M11 3L3 11" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="chips" id="chips"></div>
+        <p class="error" id="error"></p>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="box" id="result-box">
+        <div class="box-header">
+          <span class="field-label">Result</span>
+          <div class="copy-actions" id="copy-actions">
+            <button class="action-btn copy-btn" id="copy-full" type="button">Full</button>
+            <button class="action-btn copy-btn" id="copy-pct" type="button">%</button>
+          </div>
+        </div>
+        <p class="result-value empty" id="hasil">—</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer">
+    <a href="https://disc.iceyuki.com">disc.iceyuki.com</a>
+  </p>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
